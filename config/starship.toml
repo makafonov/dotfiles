@@ -1,0 +1,22 @@
+add_newline = false  # Inserts a blank line between shell prompts
+command_timeout = 1000
+
+[character]
+success_symbol = "[↪](bold green)"  # 🢖 ↯ ➧ ➲ 🅰 ϟ
+
+[package]
+disabled = true
+
+[memory_usage]
+disabled = true
+
+[python]
+symbol = "  "
+
+[cmd_duration]
+min_time = 1000
+style = "bg:light blue"
+show_milliseconds = false
+
+[git_status]
+disabled = true

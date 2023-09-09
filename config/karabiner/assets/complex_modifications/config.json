@@ -1,0 +1,64 @@
+{
+  "title": "helloworld config",
+  "rules": [
+    {
+      "description": "Disabling keys",
+      "manipulators": [
+        {"description": "Disable Command-Shift-Option-Control-Period (.)", "type": "basic", "from": {"key_code": "period", "modifiers": {"mandatory": ["command", "shift", "option", "control"]}}},
+        {"description": "Disable Command-Shift-Option-Control-Comma (,)", "type": "basic","from": {"key_code": "comma","modifiers": {"mandatory": ["command", "shift", "option", "control"]}}},
+        {"description": "Disable Command-Shift-Option-Control-G (g)", "type": "basic","from": {"key_code": "g", "modifiers": {"mandatory": ["right_shift", "right_command", "right_control", "right_option"]}}}
+      ]
+    },
+    {
+      "description": "Change input source",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "left_command",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_command"
+            }
+          ],
+          "to_if_alone": [
+            {
+              "select_input_source": {
+                "input_source_id": "com.apple.keylayout.US"
+              }
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "right_command",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "right_command"
+            }
+          ],
+          "to_if_alone": [
+            {
+              "select_input_source": {
+                "input_source_id": "com.apple.keylayout.Russian"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

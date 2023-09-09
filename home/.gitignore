@@ -1,0 +1,15 @@
+.venv*/
+
+local_settings.py
+
+.DS_Store
+Makefile
+
+.tool-versions
+
+.env
+.envrc
+
+switcher-eduschl.py
+
+example/

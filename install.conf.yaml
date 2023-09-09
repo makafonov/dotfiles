@@ -1,0 +1,43 @@
+- defaults:
+    link:
+      relink: true
+    brewfile:
+      stdout: false
+      stderr: false
+      include: ['tap', 'brew', 'cask', 'mas']
+
+- clean: ['~']
+
+- link:
+    ~/.hammerspoon/init.lua: home/.hammerspoon/init.lua
+    ~/.editorconfig: home/.editorconfig
+    ~/.gitignore: home/.gitignore
+    ~/.isort.cfg: home/.isort.cfg
+    ~/.psqlrc: home/.psqlrc
+    ~/.typos.toml: home/.typos.toml
+
+    ~/.config/black: config/black
+
+    ~/.config/direnv/direnv.toml: config/direnv/direnv.toml
+    ~/.config/direnv/direnvrc: config/direnv/direnvrc
+
+    ~/.config/fish/alias.fish: config/fish/alias.fish
+    ~/.config/fish/config.fish: config/fish/config.fish
+
+    ~/.config/kitty/main.conf: config/kitty/main.conf
+    ~/.config/kitty/russian.conf: config/kitty/russian.conf
+
+    ~/.config/starship.toml: config/starship.toml
+
+- create:
+    - ~/dev
+
+- brewfile:
+    file: Brewfile
+
+- shell:
+  - curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source &&
+    fisher install jorgebucaran/fisher &&
+    fisher install PatrickF1/fzf.fish &&
+    fisher install jhillyerd/plugin-git
+  - curl https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json --output ~/.config/karabiner/assets/complex_modifications/capslock.json

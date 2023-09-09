@@ -1,0 +1,16 @@
+-- Don't display the "helpful" message on startup.
+-- \set QUIET 1
+
+\set COMP_KEYWORD_CASE upper
+\set VERBOSITY verbose
+\set HISTFILE ~/.psql/history- :DBNAME
+\set HISTCONTROL ignoredups
+\x auto
+
+\pset null ¤
+
+-- Show how long each query takes to execute
+\timing
+
+\echo hello
+\unset QUIET
