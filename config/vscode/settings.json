@@ -1,0 +1,352 @@
+{
+  // "workbench.statusBar.visible": false,
+  // "workbench.editor.showTabs": false,
+  "workbench.sideBar.location": "right",
+  "editor.minimap.enabled": false,
+  "editor.lineNumbers": "on",
+  "monokaiPro.fileIconsMonochrome": false,
+
+  // Clean
+  "breadcrumbs.enabled": false,
+  // "editor.selectionHighlight": false,
+  // "editor.hover.enabled": false,
+  // "editor.guides.highlightActiveIndentation": "always",
+  "editor.renderLineHighlight": "none",
+  "editor.overviewRulerBorder": false,
+  "editor.occurrencesHighlight": false,
+  "editor.linkedEditing": true,
+  "editor.guides.indentation": false,
+  "editor.folding": true,
+
+  "window.newWindowDimensions": "inherit",
+  "window.dialogStyle": "native",
+  "window.commandCenter": true,
+
+  "workbench.colorTheme": "Monokai Pro (Filter Octagon)",
+  "workbench.iconTheme": "Monokai Pro (Filter Octagon) Icons",
+  "workbench.tree.indent": 22,
+  "workbench.list.smoothScrolling": true,
+  "workbench.startupEditor": "none",
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.editor.openPositioning": "last",
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "workbench.colorCustomizations": {
+    "gitDecoration.ignoredResourceForeground": "#697078"
+  },
+
+  // Typography
+  "editor.fontFamily": "PragmataPro",
+  "editor.fontSize": 14,
+  "editor.fontLigatures": true,
+  "editor.lineHeight": 24,
+
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.lineHeight": 1.15,
+  "terminal.integrated.fontFamily": "PragmataPro",
+
+  // Terminal
+  "terminal.integrated.tabs.enabled": true,
+  "terminal.integrated.defaultProfile.osx": "fish",
+  "terminal.explorerKind": "external",
+
+  // Editor
+  "editor.smoothScrolling": true,
+  "editor.renderWhitespace": "selection",
+  "editor.guides.bracketPairs": true,
+  "editor.guides.bracketPairsHorizontal": "active",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.cursorWidth": 2,
+  "editor.cursorBlinking": "expand",
+  "editor.snippetSuggestions": "top",
+  "editor.renderControlCharacters": true,
+  "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?",
+  "editor.suggest.matchOnWordStartOnly": true,
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "editor.inlineSuggest.enabled": true,
+  "editor.foldingMaximumRegions": 10000,
+  "editor.accessibilitySupport": "off",
+  "editor.stickyScroll.enabled": true,
+  "editor.unicodeHighlight.invisibleCharacters": false,
+
+  "editor.gotoLocation.multipleReferences": "goto",
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.gotoLocation.multipleDeclarations": "goto",
+  "editor.gotoLocation.multipleImplementations": "goto",
+  "editor.gotoLocation.multipleTypeDefinitions": "goto",
+  "editor.quickSuggestions": {
+    "other": "on",
+    "comments": "off",
+    "strings": "inline"
+  },
+  "editor.unicodeHighlight.allowedLocales": {
+    "ru": true
+  },
+  "editor.codeActionsOnSave": {
+    // "source.fixAll.stylelint": true
+    // "source.organizeImports": true,
+    // "source.sortMembers": true
+  },
+
+  "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.diffAlgorithm": "advanced",
+
+  // "mergeEditor.diffAlgorithm": "experimental",
+  "mergeEditor.diffAlgorithm": "advanced",
+
+  // Explorer
+  // "explorer.sortOrder": "type",
+  // "explorer.decorations.badges": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.openEditors.visible": 10,
+  "explorer.sortOrder": "foldersNestsFiles",
+  "explorer.compactFolders": false,
+  "explorer.autoReveal": false,
+  "explorer.confirmDelete": false,
+  "explorer.decorations.colors": false,
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "*.ts": "",
+    "*.jsx": "$(capture).js",
+    "*.tsx": "$(capture).ts",
+    "tsconfig.json": "tsconfig.*.json",
+    "package.json": "package-lock.json, .npmrc, yarn.lock, .yarnrc, pnpm-lock.yaml, .prettierrc.json, .eslintrc.yml, .eslintrc, .stylelintrc.json, gulpfile.js, .tool-versions, .prettierrc, .nvmrc, .eslintrc.js, .eslintignore, .babelrc, jest.config.js, tsconfig.json, nux.config.ts, webpack.config.js, babel.config.js, postcss.config.js"
+  },
+  "files.trimTrailingWhitespace": true,
+  "files.trimFinalNewlines": true,
+  "files.exclude": {
+    "**/__pycache__": false,
+    "**/.vscode": false,
+    "**/.git": false
+  },
+  "files.associations": {
+    "envrc": "shellscript"
+  },
+  "search.exclude": {
+    "**/.git": true,
+    "**/node_modules": true,
+    "**/assets": true,
+    "**/.venv": true,
+    "**/.htmlcov": true
+  },
+
+  // Python tools
+  "python.formatting.provider": "none",
+  "flake8.path":[
+    "${userHome}/.local/bin/flake8"
+  ],
+  "flake8.args": [
+    // "--append-config", "${userHome}/work/eduschl/example/setup.cfg",
+    "--append-config", "${workspaceFolder}/setup.cfg"
+  ],
+  "isort.path": [
+    "${userHome}/.local/bin/isort"
+  ],
+  "isort.args": [
+    "--settings-file", "${userHome}/.isort.cfg"
+  ],
+  "mypy-type-checker.path": [
+    "${userHome}/.local/bin/mypy"
+  ],
+  "mypy-type-checker.importStrategy": "fromEnvironment",
+  "black-formatter.path": [
+    "${userHome}/.local/bin/blue"
+  ],
+
+  // Python
+  "python.experiments.optInto": ["pythonTestAdapter"],
+  "python.analysis.indexing": true,
+  "python.analysis.typeCheckingMode": "off",
+  "python.analysis.completeFunctionParens": false,
+  "python.analysis.autoImportCompletions": false,
+  "python.analysis.autoFormatStrings": true,
+  "python.analysis.gotoDefinitionInStringLiteral": true,
+  "python.analysis.extraPaths": [
+    "tests/plugins/identity/"
+  ],
+  "python.analysis.packageIndexDepths": [
+    {
+      "name": "sklearn",
+      "depth": 2
+    },
+    {
+      "name": "matplotlib",
+      "depth": 2
+    },
+    {
+      "name": "scipy",
+      "depth": 2
+    },
+    {
+      "name": "django",
+      "depth": 4
+    },
+    {
+      "name": "sqlalchemy",
+      "depth": 2
+    },
+    {
+      "name": "aiohttp",
+      "depth": 2
+    },
+    {
+      "name": "selenium",
+      "depth": 4
+    }
+  ],
+
+  // "python.testing.pytestArgs": [
+  //   // Coverage is not supported by vscode:
+  //   // https://github.com/Microsoft/vscode-python/issues/693
+  //   // Note that this will make pytest fail if pytest-cov is not installed,
+  //   // if that's the case, then this option needs to be be removed (overrides
+  //   // can be set at a workspace level, it's up to you to decide what's the
+  //   // best approach). You might also prefer to only set this option
+  //   // per-workspace (wherever coverage is used).
+  //   "--no-cov"
+  // ],
+
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+
+  // Javascript
+  "emmet.includeLanguages": {
+    "django-html": "html"
+  },
+
+  "prettier.singleQuote": true,
+  "javascript.preferences.quoteStyle": "single",
+
+  // Markdown
+  "markdown.preview.fontFamily": "'PragmataPro', 'VictorMono-Medium'",
+  "markdown.preview.fontSize": 15,
+  "markdown.preview.lineHeight": 1.82,
+  "markdown.styles": [
+    "file://~/.config/vscode/markdown.css"
+  ],
+
+  // Other
+  // "errorLens.gutterIconsEnabled": true,
+  "errorLens.messageTemplate": "[$code] $message",
+  "scm.defaultViewMode": "tree",
+  "scm.diffDecorations": "all",
+  "redhat.telemetry.enabled": false,
+  "telemetry.telemetryLevel": "off",
+  "security.workspace.trust.enabled": false,
+  "task.problemMatchers.neverPrompt": {
+    "process": true
+  },
+
+  "git.openRepositoryInParentFolders": "always",
+
+  "[python]": {
+    "editor.wordBasedSuggestions": false,
+    "editor.rulers": [79, 120],
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features",
+    "editor.matchBrackets": "never"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "replacerules.rules": {
+    "Replace quotes": {
+      "find": "\"",
+      "replace": "'",
+      "languages": ["python"]
+    }
+  },
+
+  "gitlens.defaultDateShortFormat": "D-MM-YYYY",
+  "gitlens.defaultDateFormat": "D-MM-YYYY hh:mm",
+  "gitlens.blame.compact": true,
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.defaultTimeFormat": "hh:mm",
+  "gitlens.views.commitDetails.files.layout": "tree",
+  "gitlens.menus": {
+    "editor": {
+      "blame": false,
+      "clipboard": true,
+      "compare": true,
+      "history": false,
+      "remote": false
+    },
+    "editorGroup": {
+      "blame": false,
+      "compare": false
+    },
+    "editorTab": {
+      "clipboard": true,
+      "compare": true,
+      "history": true,
+      "remote": true
+    },
+    "explorer": {
+      "clipboard": true,
+      "compare": true,
+      "history": true,
+      "remote": true
+    },
+    "scm": {
+      "authors": true
+    },
+    "scmGroupInline": {
+      "stash": true
+    },
+    "scmGroup": {
+      "compare": true,
+      "openClose": true,
+      "stash": true
+    },
+    "scmItem": {
+      "clipboard": true,
+      "compare": true,
+      "history": true,
+      "remote": false,
+      "stash": true
+    }
+  },
+
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+    "yaml": true,
+    "python": true
+  },
+
+  "http.proxy": "socks5h://127.0.0.1:8099",
+  "http.proxySupport": "on",
+  "editor.suggest.showSnippets": false,
+  "workbench.editor.enablePreview": false,
+  "xml.server.vmargs": "-Xmx128M",
+  "xml.symbols.maxItemsComputed": 20000
+}

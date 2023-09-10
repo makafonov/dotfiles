@@ -1,20 +1,25 @@
 - defaults:
+    shell:
+      stdout: true
+      stderr: true
     link:
+      create: true
       relink: true
     brewfile:
-      stdout: false
-      stderr: false
+      stdout: true
+      stderr: true
+      no-upgrade: true
       include: ['tap', 'brew', 'cask', 'mas']
 
 - clean: ['~']
 
 - link:
-    ~/.hammerspoon/init.lua: home/.hammerspoon/init.lua
-    ~/.editorconfig: home/.editorconfig
-    ~/.gitignore: home/.gitignore
-    ~/.isort.cfg: home/.isort.cfg
-    ~/.psqlrc: home/.psqlrc
-    ~/.typos.toml: home/.typos.toml
+    ~/.hammerspoon/init.lua: config/.hammerspoon/init.lua
+    ~/.editorconfig: config/.editorconfig
+    ~/.gitignore: config/.gitignore
+    ~/.isort.cfg: config/.isort.cfg
+    ~/.psqlrc: config/.psqlrc
+    ~/.typos.toml: config/.typos.toml
 
     ~/.config/black: config/black
 
@@ -23,11 +28,26 @@
 
     ~/.config/fish/alias.fish: config/fish/alias.fish
     ~/.config/fish/config.fish: config/fish/config.fish
+    ~/.config/fish/functions/:
+      path: config/fish/functions/**
+      glob: true
 
+    ~/.config/kitty/kitty.conf:
+      path: config/kitty/kitty.conf
+      force: true
     ~/.config/kitty/main.conf: config/kitty/main.conf
     ~/.config/kitty/russian.conf: config/kitty/russian.conf
 
+    "~/.config/karabiner/assets/complex_modifications/config.json":
+      path: config/karabiner/assets/complex_modifications/config.json
+
     ~/.config/starship.toml: config/starship.toml
+
+    "~/Library/Application Support/Code/User/settings.json":
+      path: config/vscode/settings.json
+      force: true
+    "~/Library/Application Support/Code/User/keybindings.json":
+      path: config/vscode/keybindings.json
 
 - create:
     - ~/dev
@@ -35,9 +55,19 @@
 - brewfile:
     file: Brewfile
 
+- asdf:
+  - plugin: python
+  - plugin: nodejs
+  - plugin: rust
+    versions:
+      - 1.72.0
+  - plugin: postgres
+    versions:
+      - 12.16
+
 - shell:
-  - curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source &&
-    fisher install jorgebucaran/fisher &&
-    fisher install PatrickF1/fzf.fish &&
-    fisher install jhillyerd/plugin-git
-  - curl https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json --output ~/.config/karabiner/assets/complex_modifications/capslock.json
+  - command: [git submodule update --init --recursive --quiet, Updating submodules]
+  - command: |
+      curl -s --create-dirs https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json \
+        -o ~/.config/karabiner/assets/complex_modifications/capslock.json
+  - command: kitty +kitten themes --reload-in=all Rosé Pine Moon
