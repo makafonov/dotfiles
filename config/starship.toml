@@ -20,3 +20,6 @@ show_milliseconds = false
 
 [git_status]
 disabled = true
+
+[docker_context]
+disabled = true

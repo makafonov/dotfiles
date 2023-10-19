@@ -15,8 +15,8 @@ set -gx LANG en_US.UTF-8
 # disabling bytecode (.pyc) files
 set -gx PYTHONDONTWRITEBYTECODE 1
 
-set -gx LDFLAGS "-L$(brew --prefix openssl@1.1)/lib -L$(brew --prefix libffi)/lib"
-set -gx CPPFLAGS "-I$(brew --prefix openssl@1.1)/include -I$(brew --prefix libffi)/include -I$(brew --prefix aspell)/include"
+set -gx LDFLAGS "-L$(brew --prefix openssl@1.1)/lib -L$(brew --prefix libffi)/lib -L$(brew --prefix zlib)/lib"
+set -gx CPPFLAGS "-I$(brew --prefix openssl@1.1)/include -I$(brew --prefix libffi)/include -I$(brew --prefix aspell)/include -I$(brew --prefix zlib)/include"
 
 # For pkg-config to find libffi
 set -gx PKG_CONFIG_PATH "$(brew --prefix libffi)/lib/pkgconfig"
