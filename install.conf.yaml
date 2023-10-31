@@ -33,9 +33,6 @@
       path: config/fish/functions/**
       glob: true
 
-    ~/.config/kitty/kitty.conf:
-      path: config/kitty/kitty.conf
-      force: true
     ~/.config/kitty/main.conf: config/kitty/main.conf
     ~/.config/kitty/russian.conf: config/kitty/russian.conf
 
@@ -69,7 +66,5 @@
 
 - shell:
   - command: [git submodule update --init --recursive --quiet, Updating submodules]
-  - command: |
-      curl -s --create-dirs https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json \
-        -o ~/.config/karabiner/assets/complex_modifications/capslock.json
-  - command: kitty +kitten themes --reload-in=all Rosé Pine Moon
+  - command: [./scripts/capslock.sh, Installing CapsLock Enhancement Mac v3]
+  - command: [./scripts/kitty.sh, Configuring Kitty]
