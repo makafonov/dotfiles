@@ -15,3 +15,7 @@ abbr -a -- gcd 'git checkout dev'
 alias l='ls'
 alias ls='exa -la --color=always --group-directories-first'
 alias lt='exa -aT --color=always --group-directories-first'  # tree
+
+alias c2="awk '{ print \$2 }'"
+alias c3="awk '{ print \$3 }'"
+alias c4="awk '{ print \$4 }'"

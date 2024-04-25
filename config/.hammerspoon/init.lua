@@ -36,8 +36,8 @@ end)
 
 -- Hide kitty if not in focus
 hs.window.filter.default:subscribe(hs.window.filter.windowFocused, function(window, appName)
-  local alacritty = hs.application.get('kitty')
-  if alacritty ~= nil then
-     alacritty:hide()
+  local app = hs.application.get('kitty')
+  if app ~= nil then
+     app:hide()
   end
 end)

@@ -1,25 +1,26 @@
-add_newline = false  # Inserts a blank line between shell prompts
+add_newline = true  # Inserts a blank line between shell prompts
 command_timeout = 1000
+
+format = """
+$python\
+$directory\
+$git_branch\
+$nodejs\
+$sudo\
+$cmd_duration\
+$line_break\
+$time\
+$status\
+$shell\
+$character"""
 
 [character]
 success_symbol = "[↪](bold green)"  # 🢖 ↯ ➧ ➲ 🅰 ϟ
 
-[package]
-disabled = true
-
-[memory_usage]
-disabled = true
-
 [python]
-symbol = "  "
+format = '[(\($virtualenv\) )]($style)'
 
 [cmd_duration]
 min_time = 1000
 style = "bg:light blue"
 show_milliseconds = false
-
-[git_status]
-disabled = true
-
-[docker_context]
-disabled = true

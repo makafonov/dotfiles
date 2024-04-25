@@ -3,6 +3,7 @@
   // "workbench.editor.showTabs": false,
   "workbench.sideBar.location": "right",
   "editor.minimap.enabled": false,
+  "workbench.editor.showTabs": "none",
   "editor.lineNumbers": "on",
   "monokaiPro.fileIconsMonochrome": false,
 
@@ -13,17 +14,16 @@
   // "editor.guides.highlightActiveIndentation": "always",
   "editor.renderLineHighlight": "none",
   "editor.overviewRulerBorder": false,
-  "editor.occurrencesHighlight": false,
+  "editor.occurrencesHighlight": "off",
   "editor.linkedEditing": true,
   "editor.guides.indentation": false,
   "editor.folding": true,
 
   "window.newWindowDimensions": "inherit",
   "window.dialogStyle": "native",
-  "window.commandCenter": true,
 
-  "workbench.colorTheme": "Monokai Pro (Filter Octagon)",
-  "workbench.iconTheme": "Monokai Pro (Filter Octagon) Icons",
+  "workbench.colorTheme": "Natty",
+  "workbench.iconTheme": "rose-pine-icons",
   "workbench.tree.indent": 22,
   "workbench.list.smoothScrolling": true,
   "workbench.startupEditor": "none",
@@ -83,11 +83,6 @@
   "editor.unicodeHighlight.allowedLocales": {
     "ru": true
   },
-  "editor.codeActionsOnSave": {
-    // "source.fixAll.stylelint": true
-    // "source.organizeImports": true,
-    // "source.sortMembers": true
-  },
 
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.diffAlgorithm": "advanced",
@@ -132,14 +127,6 @@
   },
 
   // Python tools
-  "python.formatting.provider": "none",
-  "flake8.path":[
-    "${userHome}/.local/bin/flake8"
-  ],
-  "flake8.args": [
-    // "--append-config", "${userHome}/work/eduschl/example/setup.cfg",
-    "--append-config", "${workspaceFolder}/setup.cfg"
-  ],
   "isort.path": [
     "${userHome}/.local/bin/isort"
   ],
@@ -150,11 +137,20 @@
     "${userHome}/.local/bin/mypy"
   ],
   "mypy-type-checker.importStrategy": "fromEnvironment",
-  "black-formatter.path": [
-    "${userHome}/.local/bin/blue"
-  ],
+  "ruff.organizeImports": false,
+  "ruff.fixAll": true,
 
   // Python
+  "[python]": {
+    "editor.wordBasedSuggestions": "off",
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "always",
+      "source.fixAll": "always"
+    }
+  },
   "python.experiments.optInto": ["pythonTestAdapter"],
   "python.analysis.indexing": true,
   "python.analysis.typeCheckingMode": "off",
@@ -224,9 +220,9 @@
   "markdown.preview.fontFamily": "'PragmataPro', 'VictorMono-Medium'",
   "markdown.preview.fontSize": 15,
   "markdown.preview.lineHeight": 1.82,
-  "markdown.styles": [
-    "file://~/.config/vscode/markdown.css"
-  ],
+  // "markdown.styles": [
+  //   "file://~/.config/vscode/markdown.css"
+  // ],
 
   // Other
   // "errorLens.gutterIconsEnabled": true,
@@ -234,7 +230,7 @@
   "scm.defaultViewMode": "tree",
   "scm.diffDecorations": "all",
   "redhat.telemetry.enabled": false,
-  "telemetry.telemetryLevel": "off",
+  "telemetry.telemetryLevel": "all",
   "security.workspace.trust.enabled": false,
   "task.problemMatchers.neverPrompt": {
     "process": true
@@ -242,11 +238,7 @@
 
   "git.openRepositoryInParentFolders": "always",
 
-  "[python]": {
-    "editor.wordBasedSuggestions": false,
-    "editor.rulers": [79, 120],
-    "editor.defaultFormatter": "ms-python.black-formatter"
-  },
+
   "[css]": {
     "editor.defaultFormatter": "stylelint.vscode-stylelint"
   },

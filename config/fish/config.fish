@@ -3,6 +3,7 @@ eval "$(/opt/homebrew/bin/brew shellenv fish)"
 source ~/.config/fish/alias.fish
 source "$(brew --prefix asdf)"/libexec/asdf.fish
 
+fish_add_path $(brew --prefix gnu-sed)/libexec/gnubin
 fish_add_path $(brew --prefix openssl@1.1)/bin
 fish_add_path $HOME/.local/bin
 

@@ -16,6 +16,7 @@
 - link:
     ~/.hammerspoon/init.lua: config/.hammerspoon/init.lua
     ~/.editorconfig: config/.editorconfig
+    ~/.finicky.js: config/.finicky.js
     ~/.gitignore: config/.gitignore
     ~/.isort.cfg: config/.isort.cfg
     ~/.psqlrc: config/.psqlrc

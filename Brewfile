@@ -37,6 +37,7 @@ brew "pkg-config"  # xmlsec
 brew "pipx"
 brew "ripgrep"
 brew "starship"
+brew "telnet"
 brew "typos-cli"
 brew "yq"
 brew "yt-dlp"
@@ -57,6 +58,7 @@ cask "finicky"
 cask "firefox"
 cask "font-fira-code"
 cask "font-mplus"
+cask "fork"
 cask "google-chrome"
 cask "hammerspoon"
 cask "handbrake"
@@ -84,8 +86,6 @@ mas "Notability", id: 360593530
 mas "Numbers", id: 409203825
 mas "Outline", id: 1356178125
 mas "Pages", id: 409201541
-mas "PreviewCode", id: 1571797683
-mas "PreviewText", id: 1660037028
 mas "SketchBook", id: 863486266
 mas "Tot", id: 1491071483
 mas "WireGuard", id: 1451685025
