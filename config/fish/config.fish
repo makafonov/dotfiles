@@ -1,6 +1,6 @@
 eval "$(/opt/homebrew/bin/brew shellenv fish)"
 
-source ~/.config/fish/alias.fish
+source $HOME/.config/fish/alias.fish
 source "$(brew --prefix asdf)"/libexec/asdf.fish
 
 fish_add_path $(brew --prefix gnu-sed)/libexec/gnubin
@@ -16,8 +16,8 @@ set -gx LANG en_US.UTF-8
 # disabling bytecode (.pyc) files
 set -gx PYTHONDONTWRITEBYTECODE 1
 
-set -gx LDFLAGS "-L$(brew --prefix openssl@1.1)/lib -L$(brew --prefix libffi)/lib -L$(brew --prefix zlib)/lib"
-set -gx CPPFLAGS "-I$(brew --prefix openssl@1.1)/include -I$(brew --prefix libffi)/include -I$(brew --prefix aspell)/include -I$(brew --prefix zlib)/include"
+set -gx LDFLAGS $(for lib in openssl@1.1 libffi zlib libxslt libxml2; echo "-L$(brew --prefix $lib)/lib"; end | string join ' ')
+set -gx CPPFLAGS $(for lib in openssl@1.1 libffi zlib libxslt libxml2 aspell; echo "-I$(brew --prefix $lib)/include"; end | string join ' ')
 
 # For pkg-config to find libffi
 set -gx PKG_CONFIG_PATH "$(brew --prefix libffi)/lib/pkgconfig"
@@ -33,9 +33,9 @@ if test "$TERM" = "xterm-kitty"
 end
 
 # fzf
-set fzf_fd_opts --hidden --exclude=.git --no-ignore
 if type -q fisher
-  fzf_configure_bindings --directory=\cff --git_log=\сfl --git_status=\cfs --processes=\cfp --variables=\cfv
+  fzf_configure_bindings --directory=\cff --git_log=\cfl --git_status=\cfs --processes=\cfp --variables=\cfv
+  set fzf_fd_opts --hidden --exclude=.git
 end
 
 # nnn

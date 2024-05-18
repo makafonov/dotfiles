@@ -12,10 +12,6 @@
     "command": "workbench.view.debug"
   },
   {
-    "key": "cmd+k cmd+x",
-    "command": "workbench.extensions.action.showInstalledExtensions"
-  },
-  {
     "key": "cmd+k cmd+b",
     "command": "workbench.action.toggleSidebarVisibility"
   },
@@ -23,7 +19,6 @@
     "key": "cmd+t",
     "command": "workbench.action.terminal.toggleTerminal"
   },
-
   /**
    * Fold/Unfold
    **/
@@ -37,7 +32,6 @@
     "command": "editor.unfold",
     "when": "editorFocus"
   },
-
   /**
    * Line Manipulation
    **/
@@ -46,7 +40,6 @@
     "command": "editor.action.joinLines",
     "when": "editorTextFocus"
   },
-
   /**
    * Multi-Cursor
    **/
@@ -65,7 +58,6 @@
     "command": "editor.action.insertCursorAtEndOfEachLineSelected",
     "when": "editorFocus && editorHasSelection"
   },
-
   /**
    * Toggle Font Size
    **/
@@ -126,7 +118,6 @@
     "command": "editor.emmet.action.removeTag",
     "when": "editorTextFocus"
   },
-
   /**
    * Split Panels
    **/
@@ -160,7 +151,6 @@
     "command": "workbench.action.decreaseViewSize",
     "when": "editorFocus"
   },
-
   /**
    * Terminal Split Panel
    **/
@@ -184,7 +174,6 @@
     "command": "workbench.action.terminal.kill",
     "when": "terminalFocus"
   },
-
   /**
    * IntelliSense
    **/
@@ -201,7 +190,6 @@
     "command": "editor.action.goToDeclaration",
     "when": "editorTextFocus"
   },
-
   /**
    * Open DevTools
    **/
@@ -269,10 +257,6 @@
   },
   {
     "key": "cmd+n",
-    "command": "-workbench.action.files.newUntitledFile"
-  },
-  {
-    "key": "cmd+n",
     "command": "extension.advancedNewFile"
   },
   {
@@ -307,10 +291,6 @@
   {
     "key": "ctrl+`",
     "command": "-workbench.action.selectTheme"
-  },
-  {
-    "key": "alt+cmd+i",
-    "command": "python.sortImports"
   },
   {
     "key": "alt+w",
@@ -459,5 +439,38 @@
     "key": "cmd+d",
     "command": "-editor.action.addSelectionToNextFindMatch",
     "when": "editorFocus"
+  },
+  {
+    "key": "alt+cmd+i",
+    "command": "editor.action.organizeImports",
+    "when": "editorTextFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)source\\.organizeImports\\b/"
+  },
+  {
+    "key": "cmd+k cmd+s",
+    "command": "-workbench.action.openGlobalKeybindings"
+  },
+  {
+    "key": "cmd+e",
+    "command": "workbench.action.quickOpenNavigateNext",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "ctrl+tab",
+    "command": "-workbench.action.quickOpenNavigateNext",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "cmd+u cmd+e",
+    "command": "python.execInTerminal"
+  },
+  {
+    "key": "cmd+k cmd+x",
+    "command": "workbench.view.extensions",
+    "when": "viewContainer.workbench.view.extensions.enabled"
+  },
+  {
+    "key": "shift+cmd+x",
+    "command": "-workbench.view.extensions",
+    "when": "viewContainer.workbench.view.extensions.enabled"
   }
 ]
