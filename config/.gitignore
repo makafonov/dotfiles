@@ -1,15 +1,12 @@
-.venv*/
-
-local_settings.py
-
 .DS_Store
-Makefile
 
-.tool-versions
+.venv*/
 
 .env
 .envrc
+.tool-versions
+Makefile
+ruff.toml
 
+local_settings.py
 switcher-eduschl.py
-
-example/

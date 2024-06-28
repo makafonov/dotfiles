@@ -1,0 +1,49 @@
+["pyproject.toml".tool.ruff]
+line-length = 120
+target-version = "py312"
+
+["pyproject.toml".tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+  "ANN101",  # Missing type annotation for `self` in method
+  "COM812",  # conflict with formatter
+  "D1",
+  "D203",  # 1 blank line required before class docstring
+  "D213",  # Multi-line docstring summary should start at the second line
+  "I001",  # Import block is un-sorted or un-formatted
+  "ISC001",  # conflict with formatter
+  "RUF001",  # String contains ambiguous
+  "RUF002",  # Docstring contains ambiguous
+  "UP040",  # non-pep695-type-alias
+]
+
+["pyproject.toml".tool.ruff.lint.per-file-ignores]
+"tests/*" = [
+    "INP001",  # File is part of an implicit namespace package
+    "S101",  # Use of assert detected
+]
+
+["pyproject.toml".tool.ruff.lint.flake8-quotes]
+inline-quotes = "single"
+
+["pyproject.toml".tool.ruff.format]
+quote-style = "single"
+
+["pyproject.toml".tool.isort]
+multi_line_output = 3
+lines_after_imports = 2
+force_grid_wrap = true
+include_trailing_comma = true
+line_length = 1
+
+["pyproject.toml".tool.mypy]
+strict = true
+show_error_context = true
+
+["pyproject.toml".tool.pytest.ini_options]
+asyncio_mode = "auto"
+addopts = "-ra -q"
+pythonpath = "src"
+testpaths = [
+  "tests",
+]
