@@ -5,8 +5,10 @@ alias vim='nvim'
 alias ptp='ptpython'
 alias yt='yt-dlp -S "ext"'
 alias config='/usr/local/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME'
+alias charm='open -b com.jetbrains.pycharm'
 
-abbr -a -- gcd 'git checkout dev'
+abbr -a -- gswd 'git switch dev'
+abbr -a -- gswm 'if git show-ref --quiet refs/heads/main; git switch main; else; git switch master; end'
 
 alias l='ls'
 alias ls='eza -la --color=always --group-directories-first'

@@ -39,6 +39,7 @@
       path: config/karabiner/assets/complex_modifications/config.json
 
     ~/.config/starship.toml: config/starship.toml
+    ~/.config/hl/config.toml: config/hl/config.toml
 
     "~/Library/Application Support/Code/User/settings.json":
       path: config/vscode/settings.json

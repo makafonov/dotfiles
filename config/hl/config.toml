@@ -1,0 +1,21 @@
+time-zone = "Asia/Yekaterinburg"
+
+[fields]
+ignore = ["*"]
+
+[fields.predefined]
+time.names = ["record.time.timestamp"]
+message.names = ["record.message"]
+caller.names = ["record.function"]
+caller-file.names = ["record.file.path"]
+caller-line.names = ["record.line"]
+
+[fields.predefined.level.vairants]
+names = "record.level.name"
+
+[fields.predefined.level.vairants.values]
+error = ["error", "err", "fatal", "critical", "panic"]
+warning = ["warning", "warn"]
+info = ["info", "information"]
+debug = ["debug"]
+trace = ["trace"]
