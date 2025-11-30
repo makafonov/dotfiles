@@ -1,19 +1,20 @@
 time-zone = "Asia/Yekaterinburg"
 
 [fields]
-ignore = ["*"]
+hide = ["*", "!record.extra", "!exception"]
 
 [fields.predefined]
-time.names = ["record.time.timestamp"]
-message.names = ["record.message"]
+time.names = ["record.time.timestamp", "@timestamp"]
+message.names = ["record.message", "message", "log"]
 caller.names = ["record.function"]
 caller-file.names = ["record.file.path"]
 caller-line.names = ["record.line"]
+logger.names = []
 
-[fields.predefined.level.vairants]
-names = "record.level.name"
+[[fields.predefined.level.variants]]
+names = [ "record.level.name" ]
 
-[fields.predefined.level.vairants.values]
+[fields.predefined.level.variants.values]
 error = ["error", "err", "fatal", "critical", "panic"]
 warning = ["warning", "warn"]
 info = ["info", "information"]

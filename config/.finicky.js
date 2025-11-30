@@ -1,26 +1,40 @@
 // Learn more about configuration options: https://github.com/johnste/finicky/wiki/Configuration
 
-module.exports = {
+export default {
   defaultBrowser: {
-    name: "Microsoft Edge",
-    profile: "Default",
+    name: "Arc",
+    profile: "makafonov",
   },
+  rewrite: [
+    {
+      match: finicky.matchHostnames(["mm.tochka.com"]),
+      url: (url) => url.href
+        .replace("https://", "connect-link://")
+        .replace("mm.", "connect.")
+        .replace("/tochka/", "/")
+
+    },
+    {
+      match: finicky.matchHostnames(["connect.tochka.com"]),
+      url: (url) => url.href.replace("https://", "connect-link://")
+    }
+  ],
   handlers: [
     {
       match: [
         "meet.google.com/*",
       ],
       browser: {
-        name: "Microsoft Edge",
-        profile: "Profile 1",
+        name: "Arc",
+        profile: "dr.safiullin",
       }
     },
     {
       match: [
-        "github.com/*",
+        "*.ktalk.ru*",
       ],
       browser: {
-        name: "Safari",
+        name: "Google Chrome",
       }
     }
   ]

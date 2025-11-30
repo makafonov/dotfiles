@@ -50,7 +50,6 @@ brew "zlib"  # pillow
 brew "zoxide"
 brew "webp"  # pillow
 cask "alt-tab"
-cask "amethyst"
 cask "appcleaner"
 cask "arc"
 cask "authy"
@@ -77,7 +76,6 @@ cask "microsoft-edge"
 cask "obs"
 cask "obsidian"
 cask "openinterminal"
-cask "openvpn-connect"
 cask "outline-manager"
 cask "postman"
 cask "qlmarkdown"
@@ -100,7 +98,6 @@ mas "Numbers", id: 409203825
 mas "Outline", id: 1356178125
 mas "Pages", id: 409201541
 mas "SketchBook", id: 863486266
-mas "Tot", id: 1491071483
 mas "WireGuard", id: 1451685025
 vscode "charliermarsh.ruff"
 vscode "codeium.codeium"
