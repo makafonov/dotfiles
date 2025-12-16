@@ -8,7 +8,6 @@ brew "bat"
 brew "cairo"  # weasyprint
 brew "cmake"
 brew "wget"
-brew "direnv"
 brew "dive"
 brew "docker-clean"
 brew "eza"

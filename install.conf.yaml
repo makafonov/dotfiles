@@ -23,9 +23,6 @@
 
     ~/.config/ptpython/config.py: config/ptpython/config.py
 
-    ~/.config/direnv/direnv.toml: config/direnv/direnv.toml
-    ~/.config/direnv/direnvrc: config/direnv/direnvrc
-
     ~/.config/fish/alias.fish: config/fish/alias.fish
     ~/.config/fish/config.fish: config/fish/config.fish
     ~/.config/fish/functions/:

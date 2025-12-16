@@ -43,9 +43,6 @@ set _libs libffi icu4c@77
 set -gx PKG_CONFIG_PATH $(for lib in $_libs; echo "$(brew --prefix $lib)/lib/pkgconfig"; end | string join ':')
 set --erase _libs
 
-# silence the console output of direnv
-set -gx DIRENV_LOG_FORMAT ""
-
 # fzf
 set -gx FZF_DEFAULT_COMMAND "fd --type f --strip-cwd-prefix"
 if type -q fisher
