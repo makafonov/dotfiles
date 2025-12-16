@@ -1,7 +1,6 @@
 tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
 tap "homebrew/services"
-brew "asdf"
 brew "aspell"
 brew "autossh"
 brew "bat"

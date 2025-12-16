@@ -53,17 +53,6 @@
 - brewfile:
     file: Brewfile
 
-- asdf:
-  - plugin: python
-  - plugin: nodejs
-  - plugin: redis
-  - plugin: rust
-    versions:
-      - 1.72.0
-  - plugin: postgres
-    versions:
-      - 12.16
-
 - shell:
   - command: [git submodule update --init --recursive --quiet, Updating submodules]
   - command: [./scripts/capslock.sh, Installing CapsLock Enhancement Mac v3]

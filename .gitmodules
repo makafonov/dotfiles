@@ -6,6 +6,3 @@
 	path = dotbot-brewfile
 	url = https://github.com/sobolevn/dotbot-brewfile.git
 	ignore = dirty
-[submodule "dotbot-asdf"]
-	path = dotbot-asdf
-	url = https://github.com/sobolevn/dotbot-asdf.git

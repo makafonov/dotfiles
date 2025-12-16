@@ -3,20 +3,6 @@ eval "$(/opt/homebrew/bin/brew shellenv fish)"
 source $HOME/.config/fish/alias.fish
 source $HOME/.cargo/env.fish
 
-# ASDF configuration code
-if test -z $ASDF_DATA_DIR
-    set _asdf_shims "$HOME/.asdf/shims"
-else
-    set _asdf_shims "$ASDF_DATA_DIR/shims"
-end
-
-# Do not use fish_add_path (added in Fish 3.2) because it
-# potentially changes the order of items in PATH
-if not contains $_asdf_shims $PATH
-    set -gx --prepend PATH $_asdf_shims
-end
-set --erase _asdf_shims
-
 fish_add_path $(brew --prefix gnu-sed)/libexec/gnubin
 fish_add_path /opt/homebrew/opt/openssl@1.1/bin
 fish_add_path $HOME/yandex-cloud/bin
@@ -28,7 +14,6 @@ set -U fish_greeting
 set -gx EDITOR nvim
 set -gx LC_ALL en_US.UTF-8
 set -gx LANG en_US.UTF-8
-set -gx ASDF_DATA_DIR "$HOME/.asdf"
 set -gx K9S_CONFIG_DIR "$HOME/.config/k9s"
 
 # disabling bytecode (.pyc) files
